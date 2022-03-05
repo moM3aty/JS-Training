@@ -1,8 +1,8 @@
-// let checkk = confirm( "Are you graduated student up 21 years old !?" );
-// if ( checkk === false )
-// {
-//     document.getElementById( "body" ).style.display = "none";
-// }
+let checkk = confirm( "Are you graduated student up 21 years old !?" );
+if ( checkk === false )
+{
+    document.getElementById( "body" ).style.display = "none";
+}
 function dat() {
     let dValue = document.getElementById( "date" ).value;
     if ( dValue == "" )
