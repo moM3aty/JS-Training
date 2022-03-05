@@ -54,7 +54,7 @@ function GPA() {
 
 function day() {
     let dat = document.getElementById( "dd" ).value;
-    let x = new Date(dat).getDay();S
+    let x = new Date(dat).getDay();
     switch (x) {
         case 6:
             document.getElementById( "txt2" ).innerHTML = "Saturday";
