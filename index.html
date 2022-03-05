@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/index.css">
+    <title>JavaScript</title>
+</head>
+<body id="body">
+    <header>
+        <nav>
+            <ul>
+                <li>Welcome To Known Your GPA</li>
+            </ul>
+        </nav>
+    </header>
+    <section class="cont1" >
+            <input type="number" id="date" placeholder="Enter your year born">
+            <br><br>
+            <input type="submit" value="check" onclick="dat()">
+            <p id="txt"></p>
+    </section>
+    <section id="Gpa" class="cont2 cont1" >
+            <input type="number" id="GPa" placeholder="Enter your Gpa">
+            <br><br>
+            <input type="submit" onclick="GPA()">
+            <p id="txt1"></p>
+    </section>
+    <section>
+    <label class="label">Who is Today ?</label>
+    <div class="cont1">   
+        <input type="date" id="dd">
+        <br><br>
+        <input type="submit" onclick="day()">
+        <p id="txt2"></p>
+    </div>
+    <script src="./script/index.js"></script>
+    </section>
+    <br><br>
+    <section class="secImg">
+        <div class="div">
+            <img  src="./images/4158661.jpg" alt="">
+            <button onclick="imgHide()">Hide</button>
+        </div>
+        <div class="div">
+            <img  src="./images/4158699.jpg" alt="">
+            <button onclick="imgHide()">Hide</button>
+        </div>
+        <div class="div">
+            <img  src="./images/4158859.jpg" alt="">
+            <button onclick="imgHide()">Hide</button>
+        </div>
+        <div class="div">
+            <img  src="./images/lock wallpaper.png" alt="">
+            <button onclick="imgHide()">Hide</button>
+        </div>
+        <div class="div">
+            <img  src="./images/Pin on.jpg" alt="">
+            <button onclick="imgHide()">Hide</button>
+        </div>
+        <div class="div">
+            <img src="./images/wallpaperflare.com_wallpaper.jpg" alt="">
+            <button onclick="imgHide()">Hide</button>
+        </div>
+        
+    </section>
+</body>
+</html>
