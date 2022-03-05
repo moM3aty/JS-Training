@@ -1,8 +1,11 @@
-// let checkk = confirm( "Are you graduated student up 21 years old !?" );
-// if ( checkk === false )
-// {
-//     document.getElementById( "body" ).style.display = "none";
-// }
+let checkk = confirm( "Are you graduated student up 21 years old !?" );
+if ( checkk === false )
+{
+    document.getElementById( "body" ).style.display = "none";
+} else
+{
+    imgHide();
+}
 function dat() {
     let dValue = document.getElementById( "date" ).value;
     if ( dValue == "" )
@@ -54,7 +57,7 @@ function GPA() {
 
 function day() {
     let dat = document.getElementById( "dd" ).value;
-    let x = new Date(dat).getDay();S
+    let x = new Date(dat).getDay();
     switch (x) {
         case 6:
             document.getElementById( "txt2" ).innerHTML = "Saturday";
@@ -90,7 +93,6 @@ function imgHide()
     for ( let i = 0; i < 6; i++ )
     {
         v[ i ].setAttribute( 'id', `${ i }` );
-    
         v[i].onclick = function ()
         {
         if ( document.getElementById( `${i}` ).getAttribute( "id" ) === document.getElementById(`${i}`).        getAttribute("id")) {
