@@ -1,69 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Training</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style/index.css">
-    <title>JavaScript</title>
 </head>
-<body id="body" onload="imgHide()">
-    <header>
-        <nav>
-            <ul>
-                <li>Welcome To Known Your GPA</li>
-            </ul>
+<body id="body" onload="initializePage()">
+    <header class="site-header">
+        <nav class="container">
+            <h1 class="site-title">تدريب JS</h1>
         </nav>
     </header>
-    <section class="cont1" >
-            <input type="number" id="date" placeholder="Enter your year born">
-            <br><br>
-            <input type="submit" value="check" onclick="dat()">
-            <p id="txt"></p>
-    </section>
-    <section id="Gpa" class="cont2 cont1" >
-            <input type="number" id="GPa" placeholder="Enter your Gpa">
-            <br><br>
-            <input type="submit" onclick="GPA()">
-            <p id="txt1"></p>
-    </section>
-    <section>
-    <label class="label">Who is Today ?</label>
-    <div class="cont1">   
-        <input type="date" id="dd">
-        <br><br>
-        <input type="submit" onclick="day()">
-        <p id="txt2"></p>
+
+    <main class="site-main">
+
+        <section id="ageCalculatorSection" class="container card">
+            <h2 class="card-title">احسب عمرك</h2>
+            <div class="card-content">
+                <input type="number" id="date" placeholder="أدخل سنة ميلادك" class="form-input">
+                <button onclick="dat()" class="btn btn-primary">
+                    تحقق من العمر
+                </button>
+                <p id="txt" class="form-message"></p>
+            </div>
+        </section>
+
+        <section id="GpaSection" class="container card gpa-section">
+            <h2 class="card-title">احسب معدلك التراكمي</h2>
+            <div class="card-content">
+                <input type="number" id="GPa" step="0.01" placeholder="أدخل معدلك (مثال: 3.75)" class="form-input">
+                <button onclick="GPA()" class="btn btn-primary">
+                    عرض التقدير
+                </button>
+                <p id="txt1" class="form-message gpa-result"></p>
+            </div>
+        </section>
+
+        <section class="container card">
+            <h2 class="card-title">ما هو اليوم؟</h2>
+            <div class="card-content">
+                <input type="date" id="dd" class="form-input">
+                <button onclick="day()" class="btn btn-primary">
+                    اعرف اليوم
+                </button>
+                <p id="txt2" class="form-message day-result"></p>
+            </div>
+        </section>
+
+        <section class="container card">
+            <h2 class="card-title">معرض الصور</h2>
+            <div id="imageGallery" class="image-gallery">
+                </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer-bottom">
+        <p>&copy; <span id="currentYear"></span> جميع الحقوق محفوظة. تصميم وتطوير بواسطة محمد أبوالمعاطي &hearts;.</p>
+    </footer>
+
+    <div id="initialCheckModal" class="modal-overlay">
+        <div class="modal-content">
+            <h3 class="modal-title">تحقق من الأهلية</h3>
+            <p class="modal-text">هل أنت طالب متخرج وعمرك يزيد عن 21 عامًا؟</p>
+            <div class="modal-actions">
+                <button id="confirmNo" class="btn btn-danger">لا</button>
+                <button id="confirmYes" class="btn btn-primary">نعم</button>
+            </div>
+        </div>
     </div>
+
     <script src="./script/index.js"></script>
-    </section>
-    <br><br>
-    <section class="secImg">
-        <div class="div">
-            <img  src="./images/4158661.jpg" alt="">
-            <button>Hide</button>
-        </div>
-        <div class="div">
-            <img  src="./images/4158699.jpg" alt="">
-            <button>Hide</button>
-        </div>
-        <div class="div">
-            <img  src="./images/4158859.jpg" alt="">
-            <button>Hide</button>
-        </div>
-        <div class="div">
-            <img  src="./images/lock wallpaper.png" alt="">
-            <button>Hide</button>
-        </div>
-        <div class="div">
-            <img  src="./images/Pin on.jpg" alt="">
-            <button>Hide</button>
-        </div>
-        <div class="div">
-            <img src="./images/wallpaperflare.com_wallpaper.jpg" alt="">
-            <button>Hide</button>
-        </div>
-        
-    </section>
 </body>
 </html>
